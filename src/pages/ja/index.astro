@@ -1,0 +1,546 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/global.css";
+import heroBg from "../../assets/hero-bg.png";
+import ja from "../../i18n/ja";
+
+const title = "NoLogic - イラストからゲームを作ろう";
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+</head>
+<body
+  class="bg-gradient-to-br from-pastel-pink via-pastel-purple to-pastel-blue min-h-screen"
+>
+  <!-- Navigation -->
+  <nav
+    class="bg-white/80 backdrop-blur-sm sticky top-0 z-50 border-b border-white/20"
+  >
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center py-4">
+        <div class="flex items-center space-x-2">
+          <div
+            class="w-8 h-8 bg-gradient-to-r from-soft-pink to-soft-purple rounded-lg flex items-center justify-center"
+          >
+            <span class="text-white font-bold text-sm">{ja.hero.title}</span>
+          </div>
+          <span class="text-xl font-bold text-gray-800"></span>
+        </div>
+        <div class="hidden md:flex space-x-8">
+          <a
+            href="#features"
+            class="text-gray-600 hover:text-gray-800 transition-colors"
+            >{ja.nav.features}</a
+          >
+          <a
+            href="#how-it-works"
+            class="text-gray-600 hover:text-gray-800 transition-colors"
+            >{ja.nav.howItWorks}</a
+          >
+          <a
+            href="#examples"
+            class="text-gray-600 hover:text-gray-800 transition-colors"
+            >{ja.nav.examples}</a
+          >
+        </div>
+        <div class="flex items-center space-x-4">
+          <button
+            class="bg-gradient-to-r from-soft-pink to-soft-purple text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105"
+          >
+            サインアップ
+          </button>
+          <div class="flex items-center space-x-2 ml-4 text-sm">
+            <a href="/ja" class="text-gray-800 border-b-2 border-gray-800"
+              >日本語</a
+            >
+            <span class="text-gray-400">/</span>
+            <a
+              href="/en"
+              class="text-gray-600 hover:text-gray-800 transition-colors"
+              >English</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section with Background Image -->
+  <section class="relative min-h-screen flex items-center">
+    <!-- Background Image -->
+    <div class="absolute inset-0 z-0">
+      <img
+        src={heroBg.src}
+        alt="Creator workspace with tablet showing game characters"
+        class="w-full h-full object-cover"
+      />
+      <!-- Overlay for better text readability -->
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/30"
+      >
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div
+      class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20"
+    >
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="space-y-8">
+          <h1
+            class="text-4xl lg:text-6xl font-bold text-white leading-tight drop-shadow-lg"
+          >
+            {ja.hero.title}
+          </h1>
+          <p class="text-xl text-gray-100 leading-relaxed drop-shadow-md">
+            {ja.hero.subtitle}
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <button
+              class="bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center space-x-2"
+            >
+              <span>{ja.hero.button}</span>
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+              </svg>
+            </button>
+            <button
+              class="bg-white/20 backdrop-blur-sm text-white border-2 border-white/30 px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/30 transition-all duration-300 inline-flex items-center justify-center space-x-2"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                ></path>
+              </svg>
+              <span>{ja.hero.demo}</span>
+            </button>
+          </div>
+          <div class="flex items-center space-x-6 text-white/80">
+            <div class="flex items-center space-x-2">
+              <svg
+                class="w-5 h-5 text-green-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              <span>{ja.hero.badges[0]}</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <svg
+                class="w-5 h-5 text-green-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              <span>{ja.hero.badges[1]}</span>
+            </div>
+          </div>
+        </div>
+        <!-- Right side can be empty or contain additional elements -->
+        <div class="hidden lg:block">
+          <!-- This space is intentionally left for the background image to show through -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
+      <div class="animate-bounce">
+        <svg
+          class="w-6 h-6 text-white/60"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem Section -->
+  <section class="bg-white/40 backdrop-blur-sm py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl lg:text-4xl font-bold text-gray-800 mb-12">
+        {ja.pain.title}
+      </h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        {
+          (() => {
+            const points = ja.pain.points;
+            const emojis = ja.pain.emojis;
+            const result = [];
+            for (let idx = 0; idx < points.length; idx++) {
+              const point = points[idx];
+              result.push(
+                <div class="bg-white/60 rounded-2xl p-8 shadow-lg">
+                  <div class="text-4xl mb-4">{emojis[idx]}</div>
+                  <p class="text-lg text-gray-700 font-medium">{point}</p>
+                </div>
+              );
+            }
+            return result;
+          })()
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
+        {ja.solution.title}
+      </h2>
+      <p class="text-xl text-gray-600">
+        {ja.solution.subtitle}
+      </p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      {
+        (() => {
+          const result = [];
+          for (let idx = 0; idx < ja.solution.features.length; idx++) {
+            const feature = ja.solution.features[idx];
+            result.push(
+              <div class="text-center group">
+                <div
+                  class={`w-20 h-20 rounded-2xl mx-auto mb-6 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 ${
+                    idx === 0
+                      ? "bg-gradient-to-br from-pastel-pink to-soft-pink"
+                      : idx === 1
+                        ? "bg-gradient-to-br from-pastel-purple to-soft-purple"
+                        : "bg-gradient-to-br from-pastel-blue to-soft-blue"
+                  }`}
+                >
+                  {/* Optionally place icons here if desired */}
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">
+                  {feature.title}
+                </h3>
+                <p class="text-gray-600">{feature.description}</p>
+              </div>
+            );
+          }
+          return result;
+        })()
+      }
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section id="how-it-works" class="bg-white/40 backdrop-blur-sm py-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
+          {ja.howTo.title}
+        </h2>
+        <p class="text-xl text-gray-600">
+          {ja.howTo.subtitle}
+        </p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        {
+          (() => {
+            const result = [];
+            for (let idx = 0; idx < ja.howTo.steps.length; idx++) {
+              const step = ja.howTo.steps[idx];
+              result.push(
+                <div class={idx < 2 ? "relative" : ""}>
+                  <div class="bg-white/80 rounded-2xl p-8 shadow-lg text-center">
+                    <div
+                      class={`w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-bold text-white ${
+                        idx === 0
+                          ? "bg-gradient-to-r from-soft-pink to-soft-purple"
+                          : idx === 1
+                            ? "bg-gradient-to-r from-soft-purple to-soft-blue"
+                            : "bg-gradient-to-r from-soft-blue to-soft-green"
+                      }`}
+                    >
+                      {step.step}
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">
+                      {step.title}
+                    </h3>
+                    <p class="text-gray-600 mb-6">{step.description}</p>
+                    <div
+                      class={`rounded-xl p-4 ${
+                        idx === 0
+                          ? "bg-pastel-pink"
+                          : idx === 1
+                            ? "bg-pastel-purple"
+                            : "bg-pastel-blue"
+                      }`}
+                    >
+                      <img
+                        src="/placeholder.svg?height=120&width=120"
+                        alt={`${step.title} step`}
+                        class="w-full h-auto rounded-lg"
+                      />
+                    </div>
+                  </div>
+                  {idx < 2 && (
+                    <div class="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2">
+                      <svg
+                        class={`w-8 h-8 ${
+                          idx === 0 ? "text-soft-purple" : "text-soft-blue"
+                        }`}
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z" />
+                      </svg>
+                    </div>
+                  )}
+                </div>
+              );
+            }
+            return result;
+          })()
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Use Cases Section -->
+  <section id="examples" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
+        {ja.useCases.title}
+      </h2>
+      <p class="text-xl text-gray-600">
+        {ja.useCases.subtitle}
+      </p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      {
+        (() => {
+          const result = [];
+          for (let idx = 0; idx < ja.useCases.cases.length; idx++) {
+            const ucase = ja.useCases.cases[idx];
+            result.push(
+              <div class="bg-white/60 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div class="text-center mb-6">
+                  <div
+                    class={`w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center ${
+                      idx === 0
+                        ? "bg-gradient-to-r from-soft-pink to-soft-purple"
+                        : idx === 1
+                          ? "bg-gradient-to-r from-soft-purple to-soft-blue"
+                          : "bg-gradient-to-r from-soft-blue to-soft-green"
+                    }`}
+                  >
+                    <span class="text-2xl">{ucase.emoji}</span>
+                  </div>
+                  <h3 class="text-xl font-bold text-gray-800">{ucase.title}</h3>
+                </div>
+                <p class="text-gray-600 mb-4">{ucase.description}</p>
+                <div
+                  class={`rounded-xl p-4 ${
+                    idx === 0
+                      ? "bg-pastel-pink"
+                      : idx === 1
+                        ? "bg-pastel-purple"
+                        : "bg-pastel-blue"
+                  }`}
+                >
+                  <img
+                    src="/placeholder.svg?height=150&width=200"
+                    alt={`${ucase.title} example`}
+                    class="w-full h-auto rounded-lg"
+                  />
+                </div>
+              </div>
+            );
+          }
+          return result;
+        })()
+      }
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="bg-white/40 backdrop-blur-sm py-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
+          {ja.testimonials.title}
+        </h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        {
+          ja.testimonials.quotes.map((quote) => (
+            <div class="bg-white/80 rounded-2xl p-8 shadow-lg">
+              <div class="flex items-center mb-4">
+                <img
+                  src="/placeholder.svg?height=50&width=50"
+                  alt="User avatar"
+                  class="w-12 h-12 rounded-full mr-4"
+                />
+                <div>
+                  <h4 class="font-bold text-gray-800">{quote.name}</h4>
+                  <p class="text-sm text-gray-600">{quote.role}</p>
+                </div>
+              </div>
+              <p class="text-gray-700 italic">"{quote.text}"</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA Section -->
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+    <div
+      class="bg-gradient-to-r from-pastel-pink via-pastel-purple to-pastel-blue rounded-3xl p-12 shadow-2xl"
+    >
+      <h2 class="text-3xl lg:text-5xl font-bold text-gray-800 mb-6">
+        {ja.cta.heading}
+      </h2>
+      <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+        {ja.cta.description}
+      </p>
+      <button
+        class="bg-gradient-to-r from-soft-pink to-soft-purple text-white px-10 py-4 rounded-full text-xl font-semibold hover:shadow-xl transition-all duration-300 transform hover:scale-105 inline-flex items-center space-x-3"
+      >
+        <span>{ja.cta.button}</span>
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+        </svg>
+      </button>
+      <p class="text-sm text-gray-500 mt-4">
+        {ja.cta.subtext}
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white/60 backdrop-blur-sm border-t border-white/20 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div class="col-span-2">
+          <div class="flex items-center space-x-2 mb-4">
+            <div
+              class="w-8 h-8 bg-gradient-to-r from-soft-pink to-soft-purple rounded-lg flex items-center justify-center"
+            >
+              <span class="text-white font-bold text-sm">GC</span>
+            </div>
+            <span class="text-xl font-bold text-gray-800">GameCraft</span>
+          </div>
+        </div>
+        <div>
+          <h3 class="font-bold text-gray-800 mb-4">{ja.footer.product}</h3>
+          <ul class="space-y-2 text-gray-600">
+            <li>
+              <a href="#" class="hover:text-gray-800 transition-colors"
+                >{ja.footer.links.features}</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-gray-800 transition-colors"
+                >{ja.footer.links.pricing}</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-gray-800 transition-colors"
+                >{ja.footer.links.examples}</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-gray-800 transition-colors"
+                >{ja.footer.links.tutorials}</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold text-gray-800 mb-4">{ja.footer.support}</h3>
+          <ul class="space-y-2 text-gray-600">
+            <li>
+              <a href="#" class="hover:text-gray-800 transition-colors"
+                >{ja.footer.links.terms}</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-gray-800 transition-colors"
+                >{ja.footer.links.privacy}</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-gray-800 transition-colors"
+                >{ja.footer.links.contact}</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-gray-800 transition-colors"
+                >{ja.footer.links.help}</a
+              >
+            </li>
+            <li>
+              <div class="flex items-center space-x-2 text-sm">
+                <a href="/ja" class="text-gray-800 border-b-2 border-gray-800"
+                  >日本語</a
+                >
+                <span class="text-gray-400">/</span>
+                <a
+                  href="/en"
+                  class="text-gray-600 hover:text-gray-800 transition-colors"
+                  >English</a
+                >
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-200 mt-8 pt-8 text-center text-gray-600">
+        <p>
+          {ja.footer.copy}
+        </p>
+      </div>
+    </div>
+  </footer>
+</body>
