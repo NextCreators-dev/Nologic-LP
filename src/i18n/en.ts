@@ -5,107 +5,87 @@ const en = {
     examples: "Examples",
   },
   hero: {
-    title: "Turn your illustrations into a game — no code needed!",
+    title: "Create a game with your original character — no coding needed!",
     subtitle:
-      "Just upload your artwork and make a Suika-style web game in minutes.",
-    button: "Start Creating Now",
+      "Just upload your illustration and anyone can make an original game featuring their character. Perfect for illustrators, VTubers, and creators who want to bring their characters to life.",
+    button: "Try it now",
     demo: "Watch Demo",
     badges: ["No coding required", "Ready in minutes"],
   },
   pain: {
-    title: "Have you ever felt like...",
+    title: "Have you ever felt like this?",
     points: [
-      "Game dev looks too hard",
-      "I want to use my characters in a game",
-      "I don't know how to start",
+      "Game development seems too difficult...",
+      "I want to create a game with my own character!",
+      "I want to start, but don't know how!",
     ],
     emojis: ["😰", "🎨", "🤔"],
   },
   solution: {
-    title: "Creating games has never been easier",
-    subtitle: "Three simple steps to turn your art into an interactive game",
+    title: "Game creation made this simple!",
+    subtitle: "Three steps to turn your illustration into an interactive game",
     features: [
       {
-        title: "Upload Illustrations",
-        description: "Drag and drop your artwork. We support PNG, JPG, and SVG files.",
+        title: "Just upload your image!",
+        description: "Upload your character’s image to instantly create a game!",
       },
       {
-        title: "Set Evolution Order",
-        description: "Arrange your characters in the order they should evolve in your Suika game.",
+        title: "Choose from a variety of templates!",
+        description: "Puzzle, RPG, adventure and more — choose what fits best!",
       },
       {
-        title: "Share Instantly",
-        description: "Get a shareable link to your game that works on any device, anywhere.",
+        title: "No app install required!",
+        description: "Play easily just by clicking a link!",
       },
     ],
   },
   howTo: {
     title: "How it works",
-    subtitle: "From artwork to playable game in three easy steps",
+    subtitle: "From illustration to game — just 3 steps!",
     steps: [
       {
         step: "1",
-        title: "Upload",
-        description: "Drag and drop your character illustrations into our editor",
+        title: "Choose your game!",
+        description: "Select your game from multiple templates!",
       },
       {
         step: "2",
-        title: "Drag & Drop Order",
-        description: "Arrange your characters in the evolution sequence you want",
+        title: "Upload your character image!",
+        description: "Send your character image and game creation begins!",
       },
       {
         step: "3",
-        title: "Generate",
-        description: "Click generate and get your playable Suika game instantly",
+        title: "Play and share!",
+        description: "Your game is ready to play and share right away!",
       },
     ],
   },
   useCases: {
-    title: "Perfect for creators like you",
-    subtitle: "See how different creators use GameCraft",
+    title: "Perfect for creators like these!",
+    subtitle: "So many ways to use it",
     cases: [
       {
         emoji: "🎨",
         title: "Illustrators",
-        description: "I created a game featuring all my original characters. My followers love playing with my art!",
+        description: "Make games featuring your original characters.\nLet your fans interact with your work!",
       },
       {
         emoji: "📺",
         title: "VTubers",
-        description: "My viewers can now play a game with my avatar and all my different outfits. Stream engagement is through the roof!",
+        description: "Turn your avatar and outfits into fun stream content!",
       },
       {
         emoji: "❤️",
         title: "Fan Games",
-        description: "I made a fan game of my favorite anime characters. The community loves it and it's so easy to update!",
-      },
-    ],
-  },
-  testimonials: {
-    title: "What creators are saying",
-    quotes: [
-      {
-        name: "@ArtistMika",
-        role: "Digital Illustrator",
-        text: "I went from idea to playable game in 10 minutes! My art has never been this interactive before. GameCraft is a game-changer! 🎨✨",
-      },
-      {
-        name: "@VTuberLuna",
-        role: "VTuber",
-        text: "My community loves the game I made with my different forms! Stream donations went up 200% since I started using this. Amazing! 💜",
-      },
-      {
-        name: "@CreatorKai",
-        role: "Content Creator",
-        text: "Finally, a way to make games without learning to code! I've made 5 games already and my followers can't get enough. So addictive! 🎮",
+        description: "Boost your community with fan-made games for your favorite characters!",
       },
     ],
   },
   cta: {
-    heading: "Ready to create your own game?",
-    description: "Join thousands of creators who are already turning their art into interactive experiences. No coding required, no complex setup. Just pure creative fun!",
-    button: "Try for Free",
-    subtext: "No credit card required • Start creating in seconds",
+    heading: "Let’s create a game with your character!",
+    description: "No code, no setup — just pure fun!",
+    button: "Try it now",
+    subtext: "You can start right away",
   },
   footer: {
     product: "Product",
@@ -120,7 +100,8 @@ const en = {
       contact: "Contact",
       help: "Help Center",
     },
-    copy: "© 2024 GameCraft. All rights reserved. Made with ❤️ for creators.",
+    copy: "© 2025 Creator no Uekibachi Inc. Made with ❤️ for all creators.",
+    langSwitch: "日本語",
   },
 };
 

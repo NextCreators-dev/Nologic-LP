@@ -26,9 +26,9 @@ const title = "NoLogic - Turn your illustration into a game";
           <div
             class="w-8 h-8 bg-gradient-to-r from-soft-pink to-soft-purple rounded-lg flex items-center justify-center"
           >
-            <span class="text-white font-bold text-sm">GC</span>
+            <span class="text-white font-bold text-sm">NL</span>
           </div>
-          <span class="text-xl font-bold text-gray-800">GameCraft</span>
+          <span class="text-xl font-bold text-gray-800">NoLogic</span>
         </div>
         <div class="hidden md:flex space-x-8">
           <a
@@ -49,11 +49,6 @@ const title = "NoLogic - Turn your illustration into a game";
         </div>
         <div>
           <div class="flex items-center space-x-4">
-            <button
-              class="bg-gradient-to-r from-soft-pink to-soft-purple text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105"
-            >
-              Sign Up
-            </button>
             <div class="flex items-center space-x-2 text-sm">
               <a
                 href="/ja"
@@ -103,9 +98,9 @@ const title = "NoLogic - Turn your illustration into a game";
           </p>
           <div class="flex flex-col sm:flex-row gap-4">
             <button
-              class="bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center space-x-2"
+              class="bg-gray-400 text-white px-8 py-4 rounded-full text-lg font-semibold inline-flex items-center justify-center space-x-2 cursor-not-allowed"
             >
-              <span>{en.hero.button}</span>
+              <span>Coming Soon</span>
               <svg
                 class="w-5 h-5"
                 fill="none"
@@ -362,58 +357,12 @@ const title = "NoLogic - Turn your illustration into a game";
                   <h3 class="text-xl font-bold text-gray-800">{ucase.title}</h3>
                 </div>
                 <p class="text-gray-600 mb-4">{ucase.description}</p>
-                <div
-                  class={`rounded-xl p-4 ${
-                    idx === 0
-                      ? "bg-pastel-pink"
-                      : idx === 1
-                        ? "bg-pastel-purple"
-                        : "bg-pastel-blue"
-                  }`}
-                >
-                  <img
-                    src="/placeholder.svg?height=150&width=200"
-                    alt={`${ucase.title} example`}
-                    class="w-full h-auto rounded-lg"
-                  />
-                </div>
               </div>
             );
           }
           return result;
         })()
       }
-    </div>
-  </section>
-
-  <!-- Testimonials Section -->
-  <section class="bg-white/40 backdrop-blur-sm py-16">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
-          {en.testimonials.title}
-        </h2>
-      </div>
-      <div class="grid md:grid-cols-3 gap-8">
-        {
-          en.testimonials.quotes.map((quote) => (
-            <div class="bg-white/80 rounded-2xl p-8 shadow-lg">
-              <div class="flex items-center mb-4">
-                <img
-                  src="/placeholder.svg?height=50&width=50"
-                  alt="User avatar"
-                  class="w-12 h-12 rounded-full mr-4"
-                />
-                <div>
-                  <h4 class="font-bold text-gray-800">{quote.name}</h4>
-                  <p class="text-sm text-gray-600">{quote.role}</p>
-                </div>
-              </div>
-              <p class="text-gray-700 italic">"{quote.text}"</p>
-            </div>
-          ))
-        }
-      </div>
     </div>
   </section>
 
@@ -429,9 +378,9 @@ const title = "NoLogic - Turn your illustration into a game";
         {en.cta.description}
       </p>
       <button
-        class="bg-gradient-to-r from-soft-pink to-soft-purple text-white px-10 py-4 rounded-full text-xl font-semibold hover:shadow-xl transition-all duration-300 transform hover:scale-105 inline-flex items-center space-x-3"
+        class="bg-gray-400 text-white px-10 py-4 rounded-full text-xl font-semibold inline-flex items-center space-x-3 cursor-not-allowed"
       >
-        <span>{en.cta.button}</span>
+        <span>Coming Soon</span>
         <svg
           class="w-6 h-6"
           fill="none"
@@ -460,9 +409,9 @@ const title = "NoLogic - Turn your illustration into a game";
             <div
               class="w-8 h-8 bg-gradient-to-r from-soft-pink to-soft-purple rounded-lg flex items-center justify-center"
             >
-              <span class="text-white font-bold text-sm">GC</span>
+              <span class="text-white font-bold text-sm">NL</span>
             </div>
-            <span class="text-xl font-bold text-gray-800">GameCraft</span>
+            <span class="text-xl font-bold text-gray-800">NoLogic</span>
           </div>
           {
             /* Optional: add a brief English product description here if needed */
