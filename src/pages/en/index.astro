@@ -285,21 +285,6 @@ const title = "NoLogic - Turn your illustration into a game";
                       {step.title}
                     </h3>
                     <p class="text-gray-600 mb-6">{step.description}</p>
-                    <div
-                      class={`rounded-xl p-4 ${
-                        idx === 0
-                          ? "bg-pastel-pink"
-                          : idx === 1
-                            ? "bg-pastel-purple"
-                            : "bg-pastel-blue"
-                      }`}
-                    >
-                      <img
-                        src="/placeholder.svg?height=120&width=120"
-                        alt={`${step.title} step`}
-                        class="w-full h-auto rounded-lg"
-                      />
-                    </div>
                   </div>
                   {idx < 2 && (
                     <div class="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2">
